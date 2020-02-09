@@ -35,6 +35,19 @@ Please refer the page for any commands.
 
 ## LAMP STACK SETUP
 #### sudo yum update -y
-#### sudo yum install -y httpd24 php72 mysql57-server php72-mysqlnd
+#### sudo yum install -y httpd php mysql-server php-mysqlnd
 #### sudo service httpd start
 #### sudo chkconfig httpd on
+
+
+#### ssh -i <path to pem file>aws_key.pem ec2-user@ip
+
+## Advanced LAMP setup
+#### #!/bin/bash
+#### sudo yum update -y
+#### sudo yum install -y httpd php
+#### sudo service httpd start
+#### sudo chown -R ec2-user:ec2-user /var/www/
+#### sudo usermod -a -G apache ec2-user
+#### echo "<?php phpinfo(); ?>" >> /var/www/html/demo.php
+
