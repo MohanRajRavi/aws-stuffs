@@ -51,3 +51,9 @@ Please refer the page for any commands.
 #### sudo usermod -a -G apache ec2-user
 #### echo "<?php phpinfo(); ?>" >> /var/www/html/demo.php
 
+## How to connect to instance from putty
+#### cd .ssh
+#### create aws.pem file and copy the key over there
+#### remove permission for it
+#### chmod 400 aws.pem
+#### ssh -i aws.pem USERNAME@HOST-IP
